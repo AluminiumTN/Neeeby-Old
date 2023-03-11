@@ -12,7 +12,7 @@ module.exports = {
         .addStringOption(option => option.setName('colour').setDescription('Цвет (необязательно)').setRequired(false))
         .addStringOption(option => option.setName('image').setDescription('Изображение (ссылка)').setRequired(false)),
     async execute(interaction) {
-        const { options } = interaction;
+        const { options, user } = interaction;
 
         const channel = options.getChannel('channel');
         const role = options.getRole('role');
