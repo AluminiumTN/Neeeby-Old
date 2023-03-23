@@ -1,31 +1,23 @@
-const express = require('express')
-const app = express();
-const port = 3000
- 
-app.get('/', (req, res) => res.send('Bot is now running!!'))
- 
-app.listen(port, () =>
-console.log(`Your app is listening a http://localhost:${port}`)
-);
-
-
-
-
 const { Client, GatewayIntentBits, Partials, Collection } = require(`discord.js`);
 
-const {Guilds, GuildMembers, GuildMessages} = GatewayIntentBits;
+const {Guilds, GuildMembers, GuildMessages, GuildVoiceStates} = GatewayIntentBits;
 const {User, Message,GuildMember, ThreadMember, Channel} = Partials;
 
 const {loadEvents} = require(`./Handlers/eventHandler`);
 const {loadCommands} = require(`./Handlers/commandHandler`);
 
 const client = new Client({
-    intents: [Guilds, GuildMembers, GuildMessages],
+    intents: [Guilds, GuildMembers, GuildMessages, GuildVoiceStates],
     partials: [User, Message, GuildMember, ThreadMember],
 });
 
-client.commands = new Collection();
+const discordModals = require('discord-modals'); // Define the discord-modals package!
+discordModals(client); // discord-modals needs your client in order to interact with modals
 
+client.commands = new Collection();
+client.voiceGenerator = new Collection();
+
+require(`discord-modals`)(client)
 client.config = require(`./config.json`);
 
 client.login(client.config.token).then(() => {

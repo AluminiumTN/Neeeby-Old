@@ -1,5 +1,5 @@
 const { EmbedBuilder, SlashCommandBuilder, PermissionFlagsBits, ChannelType} = require('discord.js')
-const suggestionSetup = require('../../Models/suggestionSetup')
+const suggestionSetup = require('../../models/suggestionSetup')
 
 module.exports = {
     data: new SlashCommandBuilder()

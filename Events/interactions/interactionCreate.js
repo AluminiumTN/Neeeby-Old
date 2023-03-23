@@ -1,5 +1,5 @@
 const {PermissionFlagsBits, EmbedBuilder} = require('discord.js');
-const SuggestionSchema = require('../../Models/suggestion');
+const SuggestionSchema = require('../../models/suggestion');
 
 module.exports = {
     name: 'interactionCreate',

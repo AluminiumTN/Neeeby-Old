@@ -1,7 +1,7 @@
 const { ActionRowBuilder } = require('@discordjs/builders');
 const {SlashCommandBuilder, EmbedBuilder, ButtonBuilder, ButtonStyle, PermissionFlagsBits, SlashCommandAttachmentOption} = require('discord.js')
-const SuggestionSchema = require('../../Models/suggestion')
-const suggestionSetup = require('../../Models/suggestionSetup')
+const SuggestionSchema = require('../../models/suggestion')
+const suggestionSetup = require('../../models/suggestionSetup')
 
 module.exports = {
     data: new SlashCommandBuilder()
