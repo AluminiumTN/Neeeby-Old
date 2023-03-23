@@ -1,6 +1,6 @@
 {
-    "token": "MTA4NDM1MjY5Njg2MzE3ODg0Mw.GFBZx8.uU06-Ek3li4EZ1-QDpZtJzS6HMLzE6hItoDEIc",
-    "mongodb": "mongodb://Aluminium:aluminium1337@ac-krtjind-shard-00-00.emxpocq.mongodb.net:27017,ac-krtjind-shard-00-01.emxpocq.mongodb.net:27017,ac-krtjind-shard-00-02.emxpocq.mongodb.net:27017/?ssl=true&replicaSet=atlas-e1vjgn-shard-0&authSource=admin&retryWrites=true&w=majority",
+    "token": "",
+    "mongodb": "",
 
     "everyone": "605297471718948864",
     "ticketParent": "1080559461241995294",
