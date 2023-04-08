@@ -182,7 +182,8 @@ module.exports ={
  
         if (command === 'remove')
         {
- 
+           // че это за хуйня нахуй?
+            // и хули она блять не работает нахуй
             if (!interaction.member.permissions.has(PermissionsBitField.Flags.ReadMessageHistory)) return await interaction.reply({ content: 'Вам нужны права проверенного модератора чтобы использовать эту команду.', ephemeral: true })
  
             removeWarnUser = interaction.options.getUser('remove-warn-user');
